@@ -34,9 +34,10 @@
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
 
-            <TreeView Margin="10,5,5,5" MinWidth="150" Background="White">
+            <ListBox Margin="10,5,5,5" MinWidth="150" Background="White">
                 <TreeViewItem Header="本地"/>
-                <TreeViewItem Header="我的零件"/>
+                <Separator/>
+                <TreeViewItem Header="我的"/>
                 <TreeViewItem Header="最近使用"/>
                 <TreeViewItem Header="在线零件库" IsExpanded="True">
                     <TreeViewItem Header="圆形"/>
@@ -44,21 +45,28 @@
                     <TreeViewItem Header="支架"/>
                     <TreeViewItem Header="法兰"/>
                 </TreeViewItem>
-            </TreeView>
+            </ListBox>
 
             <DockPanel Grid.Column="1">
                 <TextBox DockPanel.Dock="Top" Margin="5"/>
+                
                 <ListView Margin="5"></ListView>
+
             </DockPanel>
 
             <GroupBox Grid.Column="2" MinWidth="150" Margin="5,5,10,5" Header="预览">
             </GroupBox>
 
             <StackPanel Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button Content="上一页" Margin="5" MinWidth="60"/>
+                <Button Content="上一页" Margin="5" MinWidth="60" Height="24"/>
                 <ComboBox Margin="5" MinWidth="75"></ComboBox>
                 <Button Content="下一页" Margin="5" MinWidth="60"/>
             </StackPanel>
+
+            <TextBlock Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Right" Margin="10">
+                    <Hyperlink>联系我们定制您需要的零件</Hyperlink>
+            </TextBlock>
+
         </Grid>
 
         <Grid Grid.Row="3" Background="DarkGray"/>
