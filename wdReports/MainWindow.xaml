@@ -4,7 +4,7 @@
     xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
     xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
     x:Class="wdReports.MainWindow"
-    Title="MainWindow" SizeToContent="WidthAndHeight">
+    Title="排样报告" SizeToContent="WidthAndHeight" FontFamily="Microsoft YaHei">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -50,20 +50,34 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <WrapPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" MaxWidth="120">
-                            <Button Content="收藏" Margin="2"/>
-                            <Button Content="导入" Margin="2"/>
-                            <Button Content="删除" Margin="2"/>
-                            <Button Content="导出" Margin="2"/>
-                        </WrapPanel>
+                        <Grid Grid.Row="1" Grid.Column="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Content="收藏" Margin="5,1"/>
+                            <Button Content="导入" Margin="5,1" Grid.Column="1"/>
+                            <Button Content="删除" Margin="5,1" Grid.Row="1"/>
+                            <Button Content="导出" Margin="5,1" Grid.Row="1" Grid.Column="1"/>
+                        </Grid>
 
-                        <TreeView Grid.Row="2" Grid.Column="0">
+                        <TreeView Margin="5" Grid.Row="2" Grid.Column="0" MinWidth="150">
                             <TreeViewItem Header="常用" IsExpanded="True">
 
                             </TreeViewItem>
                             <TreeViewItem Header="预置固定模板"/>
                             <TreeViewItem Header="用户报告模板"/>
                         </TreeView>
+
+                        <TextBox Grid.Row="1" Grid.Column="1" Margin="5,1"></TextBox>
+                        
+                        <ScrollViewer Grid.Row="2" Grid.Column="1" MaxHeight="800" Background="AliceBlue" Margin="5">
+                            <Rectangle Width="600" Height="2000" Fill="White" Stroke="Orange" StrokeThickness="2" Margin="10"/>
+                        </ScrollViewer>
 
 
 
@@ -75,6 +89,8 @@
                 <dx:DXTabItem Header="报告参数"/>
 
             </dx:DXTabControl>
+
+            
         </Grid>
     </Grid>
 </dx:ThemedWindow>
