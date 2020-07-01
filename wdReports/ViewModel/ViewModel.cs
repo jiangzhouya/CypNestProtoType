@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace wdReports
+namespace wdReports.ViewModel
 {
-    public class Task
+    public class ViewModel
     {
-        private string taskName;
-
     }
 }

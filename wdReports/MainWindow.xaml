@@ -5,7 +5,7 @@
     xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" 
     xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
     x:Class="wdReports.MainWindow"
-    Title="排样报告" SizeToContent="WidthAndHeight" FontFamily="Microsoft YaHei">
+    Title="排样报告" SizeToContent="WidthAndHeight" FontFamily="Microsoft YaHei" Background="#F0F0F0">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -103,17 +103,20 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
 
-                        <Rectangle Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Fill="#FFEAEAEA"></Rectangle>
+                        <DockPanel Grid.ColumnSpan="2" Margin="0,0,0,5">
+                            <TextBlock Margin="5" VerticalAlignment="Center" TextAlignment="Right" DockPanel.Dock="Right">
+                                <Hyperlink>
+                                    <TextBlock Text="下载更多模板"></TextBlock>
+                                </Hyperlink>
+                            </TextBlock>
 
-                        <Rectangle Grid.Row="0" Grid.ColumnSpan="2" Fill="#FFBDBDBD"/>
-                        <DockPanel Grid.ColumnSpan="2">
-                            <Button Content="生成报告" Margin="5"/>
-                            <Button Content="预览" Margin="5"/>
-                            <Button Content="直接打印" Margin="5"/>
-                            <TextBlock Margin="5" Text="下载更多模板" VerticalAlignment="Center" TextAlignment="Right"/>
+                            <Button Content="预览" Margin="5" DockPanel.Dock="Right"/>
+                            <Button Content="直接打印" Margin="5" DockPanel.Dock="Right"/>
+                            <Button Content="生成报告" Margin="5" DockPanel.Dock="Right"/>
+                            <Grid/>
                         </DockPanel>
 
-                        
+
 
                         <Grid Grid.Row="1" Grid.Column="0">
                             <Grid.RowDefinitions>
@@ -132,7 +135,7 @@
 
                         <TreeView Margin="5" Grid.Row="2" Grid.Column="0" MinWidth="150" Cursor="None">
                             <TreeViewItem Header="常用" IsExpanded="True">
-                                <TreeViewItem Header="123"/>
+                                
                             </TreeViewItem>
 
                             <TreeViewItem Header="预置固定模板"/>
