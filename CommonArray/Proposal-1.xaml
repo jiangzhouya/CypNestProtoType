@@ -1,12 +1,9 @@
-﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CommonArray"
-        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
-        xmlns:dxprg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid" 
-        x:Class="CommonArray.Proposal_1"
+       x:Class="CommonArray.Proposal_1"
         mc:Ignorable="d"
         Title="Proposal_1" SizeToContent="WidthAndHeight" FontFamily="Microsoft YaHei">
     <Grid>
@@ -75,26 +72,32 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Text="给阵列零件的水平/竖直边添加微连" Grid.ColumnSpan="3" Margin="5"/>
+                        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="水平/竖直边添加微连" Grid.ColumnSpan="2" Margin="5"/>
+                            <TextBlock Text="微连大小：" VerticalAlignment="Center"/>
+                            <TextBox Text="0.0mm"/>
+
+                        </StackPanel>
+
 
                         <StackPanel Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Margin="2">
                             <TextBlock Text="个数：" VerticalAlignment="Center"/>
-                            <dxe:PopupCalcEdit MinWidth="60" Text="0"/>
+                            <TextBox Text="0" Width="40"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
                             <TextBlock Text="个数：" VerticalAlignment="Center"/>
-                            <dxe:PopupCalcEdit MinWidth="60" Text="0"/>
+                            <TextBox Text="0" Width="40"/>
                         </StackPanel>
 
 
                         <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="2">
                             <TextBlock Text="个数：" VerticalAlignment="Center"/>
-                            <dxe:PopupCalcEdit MinWidth="60" Text="0"/>
+                            <TextBox Text="0" Width="40"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <TextBlock Text="个数：" VerticalAlignment="Center"/>
-                            <dxe:PopupCalcEdit MinWidth="60" Text="0"/>
+                            <TextBox Text="0" Width="40"/>
 
                         </StackPanel>
 
@@ -116,97 +119,104 @@
                     <GroupBox Header="引线" MinHeight="100">
                         <Grid>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
                             </Grid.ColumnDefinitions>
-                            <StackPanel x:Name="PanelLeft" Margin="5">
-                                <RadioButton Content="优先从顶点引入" Margin="0,2"/>
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="类型：" VerticalAlignment="Center" />
-                                    <ComboBox SelectedIndex="0">
-                                        <ComboBoxItem Content="直线"/>
-                                        <ComboBoxItem Content="直线+圆弧"/>
-                                    </ComboBox>
-                                </DockPanel>
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="半径：" VerticalAlignment="Center" />
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
 
-                                </DockPanel>
-                                <CheckBox Content="引入线起点添加小圆孔" Margin="0,2"/>
-                            </StackPanel>
+                            <RadioButton Content="优先从顶点引入" Margin="5"/>
+                            <DockPanel Grid.Row="1" Margin="5">
+                                <TextBlock Text="类型：" VerticalAlignment="Center" />
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="直线"/>
+                                    <ComboBoxItem Content="直线+圆弧"/>
+                                </ComboBox>
+                            </DockPanel>
+                            <DockPanel Grid.Row="2"  Margin="5">
+                                <TextBlock Text="半径：" VerticalAlignment="Center" />
+                                <TextBox Text="0.00mm"/>
+                            </DockPanel>
+                            <CheckBox Grid.Row="3" Content="引入线起点添加小圆孔" Margin="5"/>
 
-                            <StackPanel Grid.Column="1" Margin="5">
-                                <RadioButton Content="优先从长边引入" Margin="0,2"/>
-                                <DockPanel MinWidth="120" Margin="0,2">
-                                    <TextBlock Text="引入长度：" VerticalAlignment="Center"/>
-
-                                </DockPanel>
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="引入角度：" VerticalAlignment="Center"/>
-
-                                </DockPanel>
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="圆孔半径：" VerticalAlignment="Center"/>
-
-                                </DockPanel>
-                            </StackPanel>
+                            <RadioButton Grid.Column="1" Content="优先从长边引入" Margin="5"/>
+                            <DockPanel Grid.Row="1" Grid.Column="1" MinWidth="120" Margin="5">
+                                <TextBlock Text="引入长度：" VerticalAlignment="Center"/>
+                                <TextBox Text="0.00mm"/>
+                            </DockPanel>
+                            <DockPanel Grid.Row="2" Grid.Column="1" Margin="5">
+                                <TextBlock Text="引入角度：" VerticalAlignment="Center"/>
+                                <TextBox Text="90"/>
+                            </DockPanel>
+                            <DockPanel Grid.Row="3" Grid.Column="1" Margin="5">
+                                <TextBlock Text="圆孔半径：" VerticalAlignment="Center"/>
+                                <TextBox Text="0.00mm"/>
+                            </DockPanel>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="选项">
+
+
+                    <GroupBox Header="切割刀路顺序">
                         <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Margin="5">
+                                <TextBlock Text="切割顺序：" VerticalAlignment="Center"/>
+                                <ComboBox SelectedIndex="0">
+                                    <ComboBoxItem Content="单向"/>
+                                    <ComboBoxItem Content="蛇形"/>
+                                </ComboBox>
+                            </DockPanel>
+                            <CheckBox Margin="5" Grid.Row="0" Grid.Column="1" Content="保留内轮廓顺序"/>
+                            <CheckBox Grid.Row="1" Grid.Column="0" Margin="5" Content="远离母材刀路优先"/>
+                            <CheckBox Grid.Row="1" Grid.Column="1" Content="孤岛一刀切" Margin="5"/>
+                        </Grid>
+                    </GroupBox>
 
 
-                            <StackPanel Margin="5">
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="过切距离：" VerticalAlignment="Center"/>
-
-                                </DockPanel>
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="开光距离：" VerticalAlignment="Center"/>
-
-                                </DockPanel>
-                                <CheckBox Content="孤岛一刀切" Margin="0,2"/>
-                            </StackPanel>
-                            <StackPanel Grid.Column="1" Margin="5">
-                                <CheckBox Content="保留内轮廓顺序" Margin="0,2"/>
-                                <CheckBox Content="过切回切时关光" Margin="0,2"/>
-                                <DockPanel Margin="0,2">
-                                    <TextBlock Text="切割顺序：" VerticalAlignment="Center"/>
-                                    <ComboBox SelectedIndex="0">
-                                        <ComboBoxItem Content="单向"/>
-                                        <ComboBoxItem Content="蛇形"/>
-                                    </ComboBox>
-                                </DockPanel>
-                            </StackPanel>
-                            <Rectangle Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Stroke="DarkGray" StrokeThickness="1"/>
-                            <Expander Header="高级设置" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5">
-                                <StackPanel>
-                                    <CheckBox Content="共边区外部直线优先"/>
-                                    <CheckBox Content="共边线保持同向"/>
-                                </StackPanel>
-                            </Expander>
-
-
+                    <GroupBox Header="共边过切">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <DockPanel Margin="5">
+                                <TextBlock Text="过切距离：" VerticalAlignment="Center"/>
+                                <TextBox Text="0.00mm"/>
+                            </DockPanel>
+                            <DockPanel Grid.Column="1" Margin="5">
+                                <TextBlock Text="开光距离：" VerticalAlignment="Center"/>
+                                <TextBox Text="0.00mm"/>
+                            </DockPanel>
+                            <CheckBox Grid.Row="1" Content="过切回切时关光" Margin="5"/>
                         </Grid>
 
-
                     </GroupBox>
+
+
                 </StackPanel>
             </GroupBox>
         </Grid>
 
         <Grid Grid.Row="3" Background="Black"/>
         <StackPanel Grid.Row="4" Orientation="Horizontal" FlowDirection="RightToLeft">
-            <Button Content="取消" Margin="5,10" MinWidth="64"/>
-            <Button Content="确定" Margin="5,10" MinWidth="64" IsDefault="True"/>
+            <Button Content="取消" Margin="5,10" MinWidth="80"/>
+            <Button Content="确定" Margin="5,10" MinWidth="80" IsDefault="True"/>
         </StackPanel>
 
 
