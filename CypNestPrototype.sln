@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wdReports", "wdReports\wdRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonArray", "CommonArray\CommonArray.csproj", "{400FF112-B1F0-4A8A-95FA-435BF57410D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileNameAnalysis", "FileNameAnalysis\FileNameAnalysis.csproj", "{71FD3462-C194-4703-B4F2-D5A40BCC267A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{400FF112-B1F0-4A8A-95FA-435BF57410D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{400FF112-B1F0-4A8A-95FA-435BF57410D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{400FF112-B1F0-4A8A-95FA-435BF57410D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
