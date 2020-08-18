@@ -19,5 +19,36 @@
             <TextBlock Text="自动优化参数配置" FontSize="16"/>
             <TextBlock Text="根据您的使用习惯配置自动优化参数" Margin="0,5,0,0"/>
         </StackPanel>
+
+        <Grid Grid.Row="1" Background="Blue"/>
+
+        <TabControl Grid.Row="2">
+            <TabItem Header="图纸处理">
+                <StackPanel>
+                    <GroupBox Header="图纸映射" Margin="5">
+                        <StackPanel Margin="5">
+                            <DockPanel>
+                                <StackPanel DockPanel.Dock="Left" Orientation="Horizontal">
+                                    <RadioButton Content="混合映射" VerticalAlignment="Center"/>
+                                    <RadioButton Content="颜色映射" VerticalAlignment="Center"/>
+                                    <RadioButton Content="图层映射" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" FlowDirection="RightToLeft">
+                                    <Button Height="20" Width="20"/>
+                                    <Button Height="20" Width="20" Margin="2"/>
+                                    <Button Height="20" Width="20" Margin="2"/>
+                                    <Button Height="20" Width="20" Margin="2"/>
+                                </StackPanel>
+                            </DockPanel>
+                            <ScrollViewer Height="120" MinWidth="400">
+                                <ListBox >
+
+                                </ListBox>
+                            </ScrollViewer>
+                        </StackPanel>
+                    </GroupBox>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

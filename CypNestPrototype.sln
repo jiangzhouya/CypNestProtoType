@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonArray", "CommonArray\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileNameAnalysis", "FileNameAnalysis\FileNameAnalysis.csproj", "{71FD3462-C194-4703-B4F2-D5A40BCC267A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartsAssembly", "PartsAssembly\PartsAssembly.csproj", "{F6A75CC1-9E90-43DF-BD8F-8C592EA06F4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialConfig", "MaterialConfig\MaterialConfig.csproj", "{4AF5DF54-D99F-4EEB-A97A-DC16EA908736}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71FD3462-C194-4703-B4F2-D5A40BCC267A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A75CC1-9E90-43DF-BD8F-8C592EA06F4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A75CC1-9E90-43DF-BD8F-8C592EA06F4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A75CC1-9E90-43DF-BD8F-8C592EA06F4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A75CC1-9E90-43DF-BD8F-8C592EA06F4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF5DF54-D99F-4EEB-A97A-DC16EA908736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF5DF54-D99F-4EEB-A97A-DC16EA908736}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF5DF54-D99F-4EEB-A97A-DC16EA908736}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF5DF54-D99F-4EEB-A97A-DC16EA908736}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
